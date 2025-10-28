@@ -47,7 +47,7 @@ header.container {
 }
 
 .page-header {
-  /* background-color: var(--header-bg-color); */
+  background-color: var(--header-bg-color);
   border-radius: var(--border-radius);
   margin: 0rem auto 1rem auto;
   color: var(--header-color);
