@@ -27,7 +27,9 @@ body {
   margin: 0;
   padding: 0 0 4rem 0;
   /* background-color: var(--bg-color); */
-  background: url("./assets/seamless-clouds.webp") repeat center center fixed;
+  /* background: url("./assets/seamless-clouds.webp") repeat center center fixed; */
+  background: url("./assets/seamless-clouds.webp");
+  background-size: cover;
 }
 
 /* reset defaults */
@@ -36,8 +38,16 @@ figure {
   padding: 0;
 }
 
+main.container,
+header.container {
+  font-size: clamp(1rem, 2.5cqw, 2rem);
+  padding-left: 0;
+  padding-right: 0;
+  container-type: inline-size;
+}
+
 .page-header {
-  background-color: var(--header-bg-color);
+  /* background-color: var(--header-bg-color); */
   border-radius: var(--border-radius);
   margin: 0rem auto 1rem auto;
   color: var(--header-color);
@@ -48,10 +58,8 @@ figure {
     -1px 1px 0 var(--header-shadow-color);
   padding: 2em 0 0 0; /* remove left and right padding */
   text-align: center;
-  p {
-    font-size: 0.5em;
-  }
   figure {
+    position: relative;
     margin: 0 auto 0rem 0; /* center the figure */
     max-width: 100%; /* make the figure responsive */
     width: 100%; /* make the figure responsive */
@@ -80,6 +88,7 @@ figure {
         -2px 2px 1px #000;
       p {
         margin: 0;
+        font-size: 0.5em;
       }
     }
   }
@@ -99,24 +108,7 @@ h3 {
   color: var(--h3-color);
 }
 
-main.container,
-header.container {
-  font-size: clamp(1rem, 2.5cqw, 2rem);
-  padding-left: 0;
-  padding-right: 0;
-  container-type: inline-size;
-}
-p {
-  font-size: 1em;
-  margin-bottom: 1em;
-}
-figure {
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-
-article {
+.details {
   /* font-size: clamp(1rem, 2.5cqw, 2rem); */
   display: block;
   margin: 0em auto; /* add margin to the main element */
