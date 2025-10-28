@@ -1,0 +1,139 @@
+:root {
+  --large-tablet: 1024px;
+  --container-width: 0.9;
+  --root-font-size: 16px;
+  --border-thickness: calc((1 / 16) * 1rem);
+  --border-radius: calc(((10 / 16) * 1rem));
+  --bg-color: #ff4500;
+  --nav-bg-color: #333;
+  --nav-color: #f0f0f0;
+  --nav-active-color: #eef;
+  --footer-bg-color: #333;
+  --footer-color: #ccc;
+  --footer-hover-color: #eee;
+  --header-color: white;
+  --header-shadow-color: #ff4500;
+  --header-bg-color: black;
+  --h2-color: #444;
+  --h3-color: #333;
+}
+
+body {
+  font:
+    var(--root-font-size) Roboto,
+    Tahoma,
+    sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 0 4rem 0;
+  /* background-color: var(--bg-color); */
+  background: url("./assets/seamless-clouds.webp") repeat center center fixed;
+}
+
+/* reset defaults */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.page-header {
+  background-color: var(--header-bg-color);
+  border-radius: var(--border-radius);
+  margin: 0rem auto 1rem auto;
+  color: var(--header-color);
+  text-shadow:
+    1px 1px 0 var(--header-shadow-color),
+    -1px -1px 0 var(--header-shadow-color),
+    1px -1px 0 var(--header-shadow-color),
+    -1px 1px 0 var(--header-shadow-color);
+  padding: 2em 0 0 0; /* remove left and right padding */
+  text-align: center;
+  p {
+    font-size: 0.5em;
+  }
+  figure {
+    margin: 0 auto 0rem 0; /* center the figure */
+    max-width: 100%; /* make the figure responsive */
+    width: 100%; /* make the figure responsive */
+    padding: 1em 0 0 0; /* remove padding */
+    img {
+      object-fit: cover;
+      width: 100%; /* make the image responsive */
+      height: auto; /* maintain aspect ratio */
+      border-radius: 0 0 10px 10px; /* add a rounded corner effect */
+    }
+    figcaption {
+      position: absolute;
+      padding: 0.5em 0.5em;
+      bottom: 1em;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: var(--border-radius);
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      text-shadow:
+        2px 2px 1px #000,
+        -2px -2px 1px #000,
+        2px -2px 1px #000,
+        -2px 2px 1px #000;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: var(--h2-color);
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  color: var(--h3-color);
+}
+
+main.container,
+header.container {
+  font-size: clamp(1rem, 2.5cqw, 2rem);
+  padding-left: 0;
+  padding-right: 0;
+  container-type: inline-size;
+}
+p {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  /* font-size: clamp(1rem, 2.5cqw, 2rem); */
+  display: block;
+  margin: 0em auto; /* add margin to the main element */
+  padding: 2em 3em; /* add padding to the main element */
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd; /* add a light gray border */
+  border-radius: var(--border-radius); /* add a rounded corner effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow effect */
+  h2 {
+    padding: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    word-spacing: 1em;
+  }
+  p {
+    font-size: 1em;
+  }
+}
